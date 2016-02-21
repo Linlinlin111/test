@@ -1,5 +1,23 @@
 leetcode solution:
 
+1. Two Sum
+//优化，降低复杂度
+public class Solution {
+    public int[] twoSum(int[] nums, int target) {
+        int[] result=new int[2];
+        for(int i=0;i<nums.length-1;i++){
+            for(int j=i+1;j<nums.length;j++){
+                if(nums[i]+nums[j]==target){
+                    result[0]=i;
+                    result[1]=j;
+                    return result;
+                }
+            }
+        }
+        return result;
+    }
+}
+
 2. Add Two Numbers
 
 // 考虑进位，考虑边界条件，考虑链表为空时的情况。
